@@ -1,0 +1,13 @@
+---
+- name: Install openssh-server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install openssh-server
+      apt:
+        name: htop
+        state: present
